@@ -1,4 +1,5 @@
 import Devbar from '@/components/Devbar/Devbar';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -7,15 +8,9 @@ const App = () => {
         <Devbar />
       </div>
       <div className='ml-[700px]'>
-        <div className='flex h-screen flex-col items-center justify-center'>
-          <h2>Let's build something great together</h2>
-          <p className='text-muted-foreground'>
-            Follow the steps on the left sidebar to start building
-          </p>
-        </div>
+        <Outlet />
       </div>
     </>
   );
 };
-
 export default App;

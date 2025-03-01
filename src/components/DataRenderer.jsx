@@ -1,0 +1,21 @@
+import { Spinner } from "./ui"
+
+const DataRenderer = ({isLoading, error, children}) =>{
+    
+    if(isLoading)
+    {
+        return  (<div className = 'flex justify-center align-center'>
+                        <Spinner size={'sm'} />
+                    </div>)
+    }
+    if(error)
+    {
+        return (   <div className='text-center'>{error}</div>
+        )
+    }
+
+    return children;
+
+}
+
+export default DataRenderer;
